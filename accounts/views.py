@@ -1,14 +1,11 @@
-from django.shortcuts import render
 
-from django.shortcuts import render
-
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User
 from django_filters.rest_framework import DjangoFilterBackend
 
 from rest_framework import viewsets, generics, filters
 from rest_framework import permissions
 from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
+
 
 from accounts.models import Profile
 from accounts.serializers import UserSerializer, ProfileSerializer, RegisterSerializer

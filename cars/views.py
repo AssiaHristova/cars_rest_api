@@ -1,8 +1,6 @@
-from django.shortcuts import render
+
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import generics, permissions, viewsets, renderers, filters
-from rest_framework.decorators import action
-from rest_framework.response import Response
+from rest_framework import permissions, viewsets, filters
 
 from cars.filters import UserCarFilter
 from cars.models import CarBrand, CarModel, UserCar

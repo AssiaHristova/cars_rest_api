@@ -5,8 +5,7 @@ from cars.models import CarBrand, CarModel, UserCar
 
 class CarBrandSerializer(serializers.HyperlinkedModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
-    brand_models = serializers.HyperlinkedRelatedField(many=True, read_only=True,
-                                                       view_name='carmodel-detail')
+    brand_models = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='carmodel-detail')
 
     class Meta:
         model = CarBrand
